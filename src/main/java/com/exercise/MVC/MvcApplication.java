@@ -1,9 +1,11 @@
 package com.exercise.MVC;
 
+import com.exercise.MVC.configuration.RsaKeyProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +23,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 @SpringBootApplication
-@EnableWebMvc
+@EnableConfigurationProperties(RsaKeyProperties.class)
 public class MvcApplication {
-
+/*
 	public interface SaySomethingService{
 		public String saySomething();
 	}
@@ -93,6 +95,8 @@ public class MvcApplication {
 			return saySomethingService.saySomething();
 		}
 	}
+	*/
+
 
 	public static void main(String[] args) {
 	ConfigurableApplicationContext applicationContext = SpringApplication.run(MvcApplication.class, args);
@@ -120,7 +124,6 @@ public class MvcApplication {
 		}
 		 */
 	}
-
 
 
 
