@@ -1,29 +1,13 @@
 package com.exercise.MVC;
 
-import com.exercise.MVC.configuration.RsaKeyProperties;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.exercise.MVC.configuration.RsaKeyPairGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 @SpringBootApplication
-@EnableConfigurationProperties(RsaKeyProperties.class)
+@EnableConfigurationProperties(RsaKeyPairGenerator.class)
 public class MvcApplication {
 /*
 	public interface SaySomethingService{
