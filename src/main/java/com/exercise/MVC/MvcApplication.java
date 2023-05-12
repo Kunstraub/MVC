@@ -1,13 +1,12 @@
 package com.exercise.MVC;
 
-import com.exercise.MVC.configuration.RsaKeyPairGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-@EnableConfigurationProperties(RsaKeyPairGenerator.class)
+@EnableConfigurationProperties
 public class MvcApplication {
 /*
 	public interface SaySomethingService{
@@ -84,6 +83,8 @@ public class MvcApplication {
 
 	public static void main(String[] args) {
 	ConfigurableApplicationContext applicationContext = SpringApplication.run(MvcApplication.class, args);
+
+
 		/* SaySomethingService saySomethingService = applicationContext.getBean(SaySomethingService.class);
 		System.out.println(saySomethingService.saySomething());
 
